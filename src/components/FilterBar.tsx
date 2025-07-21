@@ -57,7 +57,6 @@ const FilterBar = ({ filters, onFilterChange, onClearFilters }: FilterBarProps) 
               <SelectValue placeholder="All Branches" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Branches</SelectItem>
               {branches.map(branch => (
                 <SelectItem key={branch} value={branch}>{branch}</SelectItem>
               ))}
@@ -72,7 +71,6 @@ const FilterBar = ({ filters, onFilterChange, onClearFilters }: FilterBarProps) 
               <SelectValue placeholder="All Semesters" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Semesters</SelectItem>
               {semesters.map(sem => (
                 <SelectItem key={sem} value={sem}>Semester {sem}</SelectItem>
               ))}
@@ -87,7 +85,6 @@ const FilterBar = ({ filters, onFilterChange, onClearFilters }: FilterBarProps) 
               <SelectValue placeholder="All Years" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Years</SelectItem>
               {years.map(year => (
                 <SelectItem key={year} value={year}>{year}</SelectItem>
               ))}
@@ -102,7 +99,6 @@ const FilterBar = ({ filters, onFilterChange, onClearFilters }: FilterBarProps) 
               <SelectValue placeholder="All Subjects" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Subjects</SelectItem>
               <SelectItem value="Data Structures">Data Structures</SelectItem>
               <SelectItem value="Algorithms">Algorithms</SelectItem>
               <SelectItem value="Database Management">Database Management</SelectItem>
