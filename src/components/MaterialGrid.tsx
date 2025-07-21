@@ -165,16 +165,16 @@ const MaterialGrid = ({ searchQuery, filters }: MaterialGridProps) => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="neon-border-gradient p-4 rounded-lg text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <FileText className="h-5 w-5 text-neon-blue" />
-            <span className="text-2xl font-bold text-neon-blue">{filteredMaterials.length}</span>
+            <FileText className="h-5 w-5 text-tech-orange" />
+            <span className="text-2xl font-bold text-tech-orange">{filteredMaterials.length}</span>
           </div>
           <p className="text-sm text-muted-foreground">Materials Found</p>
         </div>
         
         <div className="neon-border-gradient p-4 rounded-lg text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <TrendingUp className="h-5 w-5 text-neon-orange" />
-            <span className="text-2xl font-bold text-neon-orange">
+            <TrendingUp className="h-5 w-5 text-tech-red" />
+            <span className="text-2xl font-bold text-tech-red">
               {filteredMaterials.reduce((sum, m) => sum + m.downloads, 0)}
             </span>
           </div>
@@ -183,8 +183,8 @@ const MaterialGrid = ({ searchQuery, filters }: MaterialGridProps) => {
         
         <div className="neon-border-gradient p-4 rounded-lg text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Star className="h-5 w-5 text-neon-violet" />
-            <span className="text-2xl font-bold text-neon-violet">
+            <Star className="h-5 w-5 text-tech-white" />
+            <span className="text-2xl font-bold text-tech-white">
               {filteredMaterials.length > 0 
                 ? (filteredMaterials.reduce((sum, m) => sum + m.rating, 0) / filteredMaterials.length).toFixed(1)
                 : '0.0'
@@ -200,21 +200,21 @@ const MaterialGrid = ({ searchQuery, filters }: MaterialGridProps) => {
         <TabsList className="grid w-full max-w-md grid-cols-3 bg-card border border-border">
           <TabsTrigger 
             value="recent" 
-            className="data-[state=active]:bg-neon-blue/20 data-[state=active]:text-neon-blue"
+            className="data-[state=active]:bg-tech-orange/20 data-[state=active]:text-tech-orange"
           >
             <Clock className="h-4 w-4 mr-1" />
             Recent
           </TabsTrigger>
           <TabsTrigger 
             value="popular" 
-            className="data-[state=active]:bg-neon-orange/20 data-[state=active]:text-neon-orange"
+            className="data-[state=active]:bg-tech-red/20 data-[state=active]:text-tech-red"
           >
             <TrendingUp className="h-4 w-4 mr-1" />
             Popular
           </TabsTrigger>
           <TabsTrigger 
             value="rating" 
-            className="data-[state=active]:bg-neon-violet/20 data-[state=active]:text-neon-violet"
+            className="data-[state=active]:bg-tech-white/20 data-[state=active]:text-tech-white"
           >
             <Star className="h-4 w-4 mr-1" />
             Top Rated
@@ -225,9 +225,9 @@ const MaterialGrid = ({ searchQuery, filters }: MaterialGridProps) => {
           {sortedMaterials.length === 0 ? (
             <div className="text-center py-12">
               <FileText className="mx-auto h-16 w-16 text-muted-foreground/50 mb-4" />
-              <h3 className="text-lg font-medium text-muted-foreground mb-2">No materials found</h3>
+              <h3 className="text-lg font-medium text-muted-foreground mb-2">No resources found</h3>
               <p className="text-sm text-muted-foreground">
-                Try adjusting your search or filters to find study materials.
+                Try adjusting your search or filters to find IT resources.
               </p>
             </div>
           ) : (

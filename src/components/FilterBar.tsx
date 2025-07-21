@@ -29,10 +29,10 @@ const FilterBar = ({ filters, onFilterChange, onClearFilters }: FilterBarProps) 
     <div className="bg-card/30 backdrop-blur-sm border border-border rounded-lg p-4 mb-6">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <SlidersHorizontal className="h-5 w-5 text-neon-violet" />
-          <h3 className="font-medium text-neon-violet">Filters</h3>
+          <SlidersHorizontal className="h-5 w-5 text-tech-orange" />
+          <h3 className="font-medium text-tech-orange">Filters</h3>
           {activeFiltersCount > 0 && (
-            <Badge variant="secondary" className="bg-neon-violet/20 text-neon-violet border-neon-violet/30">
+            <Badge variant="secondary" className="bg-tech-orange/20 text-tech-orange border-tech-orange/30">
               {activeFiltersCount} active
             </Badge>
           )}

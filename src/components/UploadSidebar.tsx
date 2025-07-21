@@ -80,7 +80,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
     setTimeout(() => {
       toast({
         title: "Upload Successful! ✨",
-        description: "Your study material has been uploaded to NeuroHub.",
+        description: "Your IT resource has been uploaded to TechIT Resource Hub.",
       });
       setUploading(false);
       setUploadData({
@@ -101,8 +101,8 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-2">
-            <Upload className="h-5 w-5 text-neon-violet" />
-            <h2 className="text-lg font-semibold text-neon-violet">Contribute</h2>
+            <Upload className="h-5 w-5 text-tech-orange" />
+            <h2 className="text-lg font-semibold text-tech-orange">Contribute</h2>
           </div>
           <Button
             variant="ghost"
@@ -118,9 +118,9 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
         <div className="flex-1 overflow-y-auto p-4">
           <Card className="neon-border-gradient">
             <CardHeader className="pb-3">
-              <CardTitle className="text-sm text-neon-orange flex items-center gap-2">
+              <CardTitle className="text-sm text-tech-red flex items-center gap-2">
                 <BookOpen className="h-4 w-4" />
-                Upload Study Material
+                Upload IT Resource
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -130,8 +130,8 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                   className={`
                     border-2 border-dashed rounded-lg p-6 text-center transition-colors cursor-pointer
                     ${dragActive 
-                      ? 'border-neon-blue bg-neon-blue/5' 
-                      : 'border-border hover:border-neon-blue/50 hover:bg-neon-blue/5'
+                      ? 'border-tech-orange bg-tech-orange/5' 
+                      : 'border-border hover:border-tech-orange/50 hover:bg-tech-orange/5'
                     }
                   `}
                   onDragEnter={handleDrag}
@@ -142,7 +142,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                 >
                   <FileText className="mx-auto h-8 w-8 text-muted-foreground mb-2" />
                   {uploadData.file ? (
-                    <p className="text-sm text-neon-blue font-medium">{uploadData.file.name}</p>
+                    <p className="text-sm text-tech-orange font-medium">{uploadData.file.name}</p>
                   ) : (
                     <div>
                       <p className="text-sm font-medium">Drop files here or click to browse</p>
@@ -166,7 +166,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                       id="title"
                       value={uploadData.title}
                       onChange={(e) => setUploadData({ ...uploadData, title: e.target.value })}
-                      placeholder="e.g., Data Structures Notes"
+                      placeholder="e.g., Python Programming Guide"
                       className="bg-input/50"
                     />
                   </div>
@@ -207,7 +207,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                       <Input
                         value={uploadData.subject}
                         onChange={(e) => setUploadData({ ...uploadData, subject: e.target.value })}
-                        placeholder="Data Structures"
+                        placeholder="Python Programming"
                         className="bg-input/50"
                       />
                     </div>
@@ -217,7 +217,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                       <Input
                         value={uploadData.subjectCode}
                         onChange={(e) => setUploadData({ ...uploadData, subjectCode: e.target.value })}
-                        placeholder="CS201"
+                        placeholder="IT101"
                         className="bg-input/50"
                       />
                     </div>
@@ -242,7 +242,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                     <Textarea
                       value={uploadData.description}
                       onChange={(e) => setUploadData({ ...uploadData, description: e.target.value })}
-                      placeholder="Brief description of the material..."
+                      placeholder="Brief description of the IT resource..."
                       className="bg-input/50 h-16 resize-none"
                     />
                   </div>
@@ -251,7 +251,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                 <Button 
                   type="submit" 
                   disabled={uploading}
-                  className="w-full gradient-primary text-primary-foreground hover:scale-105 transition-bounce neon-glow-blue"
+                  className="w-full gradient-primary text-primary-foreground hover:scale-105 transition-bounce glow-orange"
                 >
                   {uploading ? (
                     <div className="flex items-center gap-2">
@@ -261,7 +261,7 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
                   ) : (
                     <>
                       <Upload className="h-4 w-4 mr-2" />
-                      Contribute Material
+                      Contribute Resource
                     </>
                   )}
                 </Button>

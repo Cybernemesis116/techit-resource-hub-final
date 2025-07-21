@@ -31,19 +31,19 @@ const StudyMaterialCard = ({ material, onDownload, onPreview }: StudyMaterialCar
       'gradient-primary',
       'gradient-secondary', 
       'gradient-accent',
-      'from-neon-violet to-neon-blue',
-      'from-neon-orange to-neon-red',
-      'from-neon-olive to-neon-violet'
+      'from-tech-orange to-tech-red',
+      'from-tech-red to-tech-white',
+      'from-tech-white to-tech-orange'
     ];
     return gradients[index % gradients.length];
   };
 
   const getFileTypeColor = (fileType: string) => {
     switch (fileType.toLowerCase()) {
-      case 'pdf': return 'text-neon-red';
-      case 'doc': case 'docx': return 'text-neon-blue';
-      case 'ppt': case 'pptx': return 'text-neon-orange';
-      default: return 'text-neon-violet';
+      case 'pdf': return 'text-tech-red';
+      case 'doc': case 'docx': return 'text-tech-white';
+      case 'ppt': case 'pptx': return 'text-tech-orange';
+      default: return 'text-tech-orange';
     }
   };
 
@@ -81,13 +81,13 @@ const StudyMaterialCard = ({ material, onDownload, onPreview }: StudyMaterialCar
 
           {/* Metadata */}
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <Badge variant="outline" className="border-neon-violet/30 text-neon-violet">
+            <Badge variant="outline" className="border-tech-orange/30 text-tech-orange">
               {material.branch}
             </Badge>
-            <Badge variant="outline" className="border-neon-blue/30 text-neon-blue">
+            <Badge variant="outline" className="border-tech-red/30 text-tech-red">
               Sem {material.semester}
             </Badge>
-            <Badge variant="outline" className="border-neon-orange/30 text-neon-orange">
+            <Badge variant="outline" className="border-tech-white/30 text-tech-white">
               {material.year}
             </Badge>
           </div>
@@ -100,7 +100,7 @@ const StudyMaterialCard = ({ material, onDownload, onPreview }: StudyMaterialCar
                 {material.downloads}
               </span>
               <span className="flex items-center gap-1">
-                <Star className="h-3 w-3 fill-neon-orange text-neon-orange" />
+                <Star className="h-3 w-3 fill-tech-orange text-tech-orange" />
                 {material.rating}
               </span>
               <span className="flex items-center gap-1">
@@ -128,7 +128,7 @@ const StudyMaterialCard = ({ material, onDownload, onPreview }: StudyMaterialCar
             <Button
               size="sm"
               onClick={() => onDownload(material.id)}
-              className="flex-1 gradient-primary text-primary-foreground hover:scale-105 transition-bounce neon-glow-blue"
+              className="flex-1 gradient-primary text-primary-foreground hover:scale-105 transition-bounce glow-orange"
             >
               <Download className="h-3 w-3 mr-1" />
               Download

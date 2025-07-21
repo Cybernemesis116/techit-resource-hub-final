@@ -2,78 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NeuroHub Design System - Neon Futuristic Study Platform */
+/* TechIT Resource Hub Design System - Professional IT Platform */
 
 @layer base {
   :root {
     /* Core Background - Deep Black */
     --background: 0 0% 3%;
-    --foreground: 0 0% 95%;
+    --foreground: 0 0% 98%;
 
-    /* Card System with Neon Borders */
+    /* Card System with Clean Borders */
     --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card-foreground: 0 0% 98%;
 
     --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Neon Color Palette */
-    --neon-orange: 25 100% 50%;
-    --neon-red: 0 100% 60%;
-    --neon-blue: 220 100% 60%;
-    --neon-violet: 280 100% 70%;
-    --neon-purple: 300 100% 65%;
-    --neon-olive: 75 60% 45%;
+    /* Professional Color Palette - White, Red, Vivid Orange */
+    --tech-white: 0 0% 98%;
+    --tech-red: 0 85% 60%;
+    --vivid-orange: 25 100% 55%;
+    --accent-orange: 30 100% 50%;
+    --dark-red: 0 75% 45%;
+    --light-orange: 35 100% 70%;
     
-    /* Primary - Electric Blue */
-    --primary: 220 100% 60%;
+    /* Primary - Vivid Orange */
+    --primary: 25 100% 55%;
     --primary-foreground: 0 0% 5%;
 
-    /* Secondary - Neon Orange */
-    --secondary: 25 100% 50%;
-    --secondary-foreground: 0 0% 5%;
+    /* Secondary - Tech Red */
+    --secondary: 0 85% 60%;
+    --secondary-foreground: 0 0% 98%;
 
     /* Muted Dark Tones */
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 75%;
 
-    /* Accent - Neon Violet */
-    --accent: 280 100% 70%;
+    /* Accent - White */
+    --accent: 0 0% 98%;
     --accent-foreground: 0 0% 5%;
 
-    /* Destructive - Neon Red */
-    --destructive: 0 100% 60%;
-    --destructive-foreground: 0 0% 95%;
+    /* Destructive - Tech Red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
 
     /* Borders and Inputs */
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 220 100% 60%;
+    --ring: 25 100% 55%;
 
     --radius: 0.75rem;
 
     /* Sidebar Dark Theme */
     --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 85%;
-    --sidebar-primary: 280 100% 70%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 25 100% 55%;
     --sidebar-primary-foreground: 0 0% 5%;
     --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-accent-foreground: 0 0% 90%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 280 100% 70%;
+    --sidebar-ring: 25 100% 55%;
 
-    /* Neon Glow Effects */
-    --glow-orange: 0 0 20px hsl(25 100% 50% / 0.3);
-    --glow-red: 0 0 20px hsl(0 100% 60% / 0.3);
-    --glow-blue: 0 0 20px hsl(220 100% 60% / 0.3);
-    --glow-violet: 0 0 20px hsl(280 100% 70% / 0.3);
-    --glow-purple: 0 0 20px hsl(300 100% 65% / 0.3);
-    --glow-olive: 0 0 20px hsl(75 60% 45% / 0.3);
+    /* Glow Effects */
+    --glow-white: 0 0 20px hsl(0 0% 98% / 0.3);
+    --glow-red: 0 0 20px hsl(0 85% 60% / 0.3);
+    --glow-orange: 0 0 20px hsl(25 100% 55% / 0.3);
+    --glow-vivid-orange: 0 0 20px hsl(30 100% 50% / 0.3);
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-violet)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-orange)), hsl(var(--neon-red)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--neon-violet)), hsl(var(--neon-purple)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--vivid-orange)), hsl(var(--tech-red)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--accent-orange)), hsl(var(--vivid-orange)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--tech-white)), hsl(var(--light-orange)));
     --gradient-neutral: linear-gradient(135deg, hsl(0 0% 12%), hsl(0 0% 8%));
     
     /* Animation Transitions */
@@ -95,20 +93,18 @@
   body {
     @apply bg-background text-foreground font-medium;
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(280 100% 70% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(220 100% 60% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(25 100% 50% / 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(25 100% 55% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(0 85% 60% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(30 100% 50% / 0.1) 0%, transparent 50%);
   }
 }
 
 /* Custom Utility Classes */
 @layer utilities {
-  .neon-glow-blue { box-shadow: var(--glow-blue); }
-  .neon-glow-orange { box-shadow: var(--glow-orange); }
-  .neon-glow-violet { box-shadow: var(--glow-violet); }
-  .neon-glow-red { box-shadow: var(--glow-red); }
-  .neon-glow-purple { box-shadow: var(--glow-purple); }
-  .neon-glow-olive { box-shadow: var(--glow-olive); }
+  .glow-white { box-shadow: var(--glow-white); }
+  .glow-red { box-shadow: var(--glow-red); }
+  .glow-orange { box-shadow: var(--glow-orange); }
+  .glow-vivid-orange { box-shadow: var(--glow-vivid-orange); }
   
   .gradient-primary { background: var(--gradient-primary); }
   .gradient-secondary { background: var(--gradient-secondary); }
@@ -118,11 +114,11 @@
   .transition-smooth { transition: var(--transition-smooth); }
   .transition-bounce { transition: var(--transition-bounce); }
   
-  .animate-pulse-neon {
-    animation: pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
   }
   
-  @keyframes pulse-neon {
+  @keyframes glow {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
   }

@@ -62,14 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Neon Color Palette
-				neon: {
-					orange: 'hsl(var(--neon-orange))',
-					red: 'hsl(var(--neon-red))',
-					blue: 'hsl(var(--neon-blue))',
-					violet: 'hsl(var(--neon-violet))',
-					purple: 'hsl(var(--neon-purple))',
-					olive: 'hsl(var(--neon-olive))'
+				// TechIT Color Palette
+				tech: {
+					white: 'hsl(var(--tech-white))',
+					red: 'hsl(var(--tech-red))',
+					orange: 'hsl(var(--vivid-orange))',
+					'accent-orange': 'hsl(var(--accent-orange))',
+					'dark-red': 'hsl(var(--dark-red))',
+					'light-orange': 'hsl(var(--light-orange))'
 				}
 			},
 			borderRadius: {

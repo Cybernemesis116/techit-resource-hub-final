@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Search, Github, HardDrive, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import neurohubLogo from '@/assets/neurohub-logo.png';
+import techitLogo from '/lovable-uploads/0cd58ef2-434f-4df8-b1ff-6459a3dea3e8.png';
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -30,7 +30,7 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
             variant="ghost"
             size="icon"
             onClick={onMenuClick}
-            className="md:hidden text-neon-violet hover:bg-neon-violet/10"
+            className="md:hidden text-tech-orange hover:bg-tech-orange/10"
           >
             <Menu className="h-5 w-5" />
           </Button>
@@ -38,15 +38,15 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <img 
-              src={neurohubLogo} 
-              alt="NeuroHub" 
-              className="h-10 w-10 animate-float"
+              src={techitLogo} 
+              alt="TechIT" 
+              className="h-12 w-auto animate-float"
             />
             <div className="hidden sm:block">
               <h1 className="text-2xl font-bold gradient-primary bg-clip-text text-transparent">
-                NeuroHub
+                TechIT Resource Hub
               </h1>
-              <p className="text-xs text-muted-foreground">Study Materials Platform</p>
+              <p className="text-xs text-muted-foreground">Professional IT Learning Platform</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
                 placeholder="Search materials, subjects, or topics..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="pl-10 bg-input/50 border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-smooth neon-glow-blue"
+                className="pl-10 bg-input/50 border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-smooth glow-orange"
               />
             </div>
           </div>
@@ -70,15 +70,15 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
               size="icon"
               onClick={() => handleConnect('github')}
               className={`
-                border-neon-violet/30 text-neon-violet hover:bg-neon-violet/10 hover:border-neon-violet
+                border-tech-red/30 text-tech-red hover:bg-tech-red/10 hover:border-tech-red
                 transition-bounce hover:scale-110 relative overflow-hidden
-                ${isConnecting ? 'animate-pulse-neon' : ''}
+                ${isConnecting ? 'animate-glow' : ''}
               `}
               title="Connect to GitHub"
             >
               <Github className="h-4 w-4" />
               {isConnecting && (
-                <div className="absolute inset-0 bg-neon-violet/20 animate-ping rounded-md" />
+                <div className="absolute inset-0 bg-tech-red/20 animate-ping rounded-md" />
               )}
             </Button>
             
@@ -87,15 +87,15 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
               size="icon"
               onClick={() => handleConnect('drive')}
               className={`
-                border-neon-orange/30 text-neon-orange hover:bg-neon-orange/10 hover:border-neon-orange
+                border-tech-orange/30 text-tech-orange hover:bg-tech-orange/10 hover:border-tech-orange
                 transition-bounce hover:scale-110 relative overflow-hidden
-                ${isConnecting ? 'animate-pulse-neon' : ''}
+                ${isConnecting ? 'animate-glow' : ''}
               `}
               title="Connect to Google Drive"
             >
               <HardDrive className="h-4 w-4" />
               {isConnecting && (
-                <div className="absolute inset-0 bg-neon-orange/20 animate-ping rounded-md" />
+                <div className="absolute inset-0 bg-tech-orange/20 animate-ping rounded-md" />
               )}
             </Button>
           </div>

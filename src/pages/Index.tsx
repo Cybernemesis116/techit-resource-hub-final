@@ -70,13 +70,13 @@ const Index = () => {
             <div className="text-center mb-8">
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
                 <span className="gradient-primary bg-clip-text text-transparent animate-float">
-                  Welcome to NeuroHub
+                  Welcome to TechIT Resource Hub
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Your intelligent study materials platform. Access, contribute, and excel with 
-                <span className="text-neon-violet font-medium"> cutting-edge educational resources</span> 
-                tailored for your academic journey.
+                Your professional IT learning hub. Access, contribute, and excel with 
+                <span className="text-tech-orange font-medium"> industry-leading technical resources</span> 
+                tailored for your IT career advancement.
               </p>
             </div>
 
