@@ -93,9 +93,9 @@ const UploadSidebar = ({ isOpen, onClose }: UploadSidebarProps) => {
 
   return (
     <div className={`
-      fixed inset-y-0 left-0 z-50 w-80 bg-card border-r border-border transform transition-transform duration-300 
+      fixed inset-y-0 left-0 z-40 w-80 bg-card border-r border-border shadow-xl
+      transform transition-all duration-300 ease-in-out
       ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-      md:relative md:translate-x-0 ${!isOpen && 'md:-translate-x-full'}
     `}>
       <div className="h-full flex flex-col">
         {/* Header */}

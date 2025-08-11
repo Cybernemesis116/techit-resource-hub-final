@@ -36,14 +36,14 @@ const Header = ({ onMenuClick, searchQuery, onSearchChange }: HeaderProps) => {
           </Button>
 
           {/* Logo & Brand */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-shrink-0">
             <img 
               src={techitLogo} 
               alt="TechIT" 
-              className="h-12 w-auto animate-float"
+              className="h-10 w-10 object-contain animate-float drop-shadow-lg"
             />
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold gradient-primary bg-clip-text text-transparent">
+              <h1 className="text-xl lg:text-2xl font-bold text-tech-orange">
                 TechIT Resource Hub
               </h1>
               <p className="text-xs text-muted-foreground">Professional IT Learning Platform</p>

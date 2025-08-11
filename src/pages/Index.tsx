@@ -51,11 +51,17 @@ const Index = () => {
       <div className="flex relative">
         {/* Upload Sidebar - Hover Trigger */}
         <div 
-          className="fixed left-0 top-1/2 -translate-y-1/2 z-50 group"
+          className="fixed left-0 top-1/2 -translate-y-1/2 z-50"
           onMouseEnter={() => setSidebarOpen(true)}
           onMouseLeave={() => setSidebarOpen(false)}
         >
-          <div className="w-2 h-20 bg-tech-orange/20 hover:bg-tech-orange/40 transition-all duration-300 rounded-r-lg group-hover:w-4" />
+          {/* Hover trigger bar */}
+          <div className={`
+            w-2 h-20 bg-tech-orange/20 hover:bg-tech-orange/40 transition-all duration-300 rounded-r-lg cursor-pointer
+            ${sidebarOpen ? 'w-4' : 'w-2'}
+          `} />
+          
+          {/* Sidebar */}
           <UploadSidebar
             isOpen={sidebarOpen}
             onClose={() => setSidebarOpen(false)}
