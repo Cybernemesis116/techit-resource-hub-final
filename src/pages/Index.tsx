@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Upload } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import UploadSidebar from '@/components/UploadSidebar';
 import FilterBar from '@/components/FilterBar';
@@ -49,32 +52,25 @@ const Index = () => {
       />
 
       <div className="flex relative">
-        {/* Upload Sidebar - Hover Trigger */}
-        <div 
-          className="fixed left-0 top-1/2 -translate-y-1/2 z-50"
-          onMouseEnter={() => setSidebarOpen(true)}
-          onMouseLeave={() => setSidebarOpen(false)}
-        >
-          {/* Hover trigger bar */}
-          <div className={`
-            w-2 h-20 bg-tech-orange/20 hover:bg-tech-orange/40 transition-all duration-300 rounded-r-lg cursor-pointer
-            ${sidebarOpen ? 'w-4' : 'w-2'}
-          `} />
-          
-          {/* Sidebar */}
-          <UploadSidebar
-            isOpen={sidebarOpen}
-            onClose={() => setSidebarOpen(false)}
-          />
+        {/* Contribute Button */}
+        <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50">
+          <Link to="/contribute">
+            <Button 
+              className="
+                bg-tech-orange/90 hover:bg-tech-orange text-white 
+                rounded-l-none rounded-r-lg px-4 py-6 
+                transition-all duration-300 hover:scale-110 
+                shadow-lg hover:shadow-tech-orange/50
+                glow-orange group
+              "
+            >
+              <div className="flex items-center gap-2">
+                <Upload className="h-5 w-5 group-hover:animate-bounce" />
+                <span className="font-medium">Contribute</span>
+              </div>
+            </Button>
+          </Link>
         </div>
-
-        {/* Overlay for mobile */}
-        {sidebarOpen && (
-          <div
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
-            onClick={() => setSidebarOpen(false)}
-          />
-        )}
 
         {/* Main Content */}
         <main className="flex-1 p-4 md:p-6 lg:p-8 transition-smooth">
