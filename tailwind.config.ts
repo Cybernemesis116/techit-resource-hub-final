@@ -111,6 +111,11 @@ export default {
 				'glow': 'glow 2s ease-in-out infinite',
 				'slide-up': 'slide-up 0.3s ease-out'
 			},
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				inter: ["Inter", "sans-serif"],
+				orbitron: ["Orbitron", "monospace"],
+			},
 			boxShadow: {
 				'neon-sm': '0 0 10px currentColor',
 				'neon': '0 0 20px currentColor',

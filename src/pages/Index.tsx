@@ -49,11 +49,18 @@ const Index = () => {
       />
 
       <div className="flex relative">
-        {/* Upload Sidebar */}
-        <UploadSidebar
-          isOpen={sidebarOpen}
-          onClose={() => setSidebarOpen(false)}
-        />
+        {/* Upload Sidebar - Hover Trigger */}
+        <div 
+          className="fixed left-0 top-1/2 -translate-y-1/2 z-50 group"
+          onMouseEnter={() => setSidebarOpen(true)}
+          onMouseLeave={() => setSidebarOpen(false)}
+        >
+          <div className="w-2 h-20 bg-tech-orange/20 hover:bg-tech-orange/40 transition-all duration-300 rounded-r-lg group-hover:w-4" />
+          <UploadSidebar
+            isOpen={sidebarOpen}
+            onClose={() => setSidebarOpen(false)}
+          />
+        </div>
 
         {/* Overlay for mobile */}
         {sidebarOpen && (
@@ -67,13 +74,13 @@ const Index = () => {
         <main className="flex-1 p-4 md:p-6 lg:p-8 transition-smooth">
           <div className="max-w-7xl mx-auto">
             {/* Welcome Section */}
-            <div className="text-center mb-8">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                <span className="gradient-primary bg-clip-text text-transparent animate-float">
+            <div className="text-center mb-8 relative z-10">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-4 font-orbitron">
+                <span className="text-white stroke-text-gradient animate-float relative">
                   Welcome to TechIT Resource Hub
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-inter">
                 Your professional IT learning hub. Access, contribute, and excel with 
                 <span className="text-tech-orange font-medium"> industry-leading technical resources</span> 
                 tailored for your IT career advancement.
