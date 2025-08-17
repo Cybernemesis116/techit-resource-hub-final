@@ -14,7 +14,157 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      downloads: {
+        Row: {
+          downloaded_at: string
+          id: string
+          material_id: string
+          user_id: string
+        }
+        Insert: {
+          downloaded_at?: string
+          id?: string
+          material_id: string
+          user_id: string
+        }
+        Update: {
+          downloaded_at?: string
+          id?: string
+          material_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "downloads_material_id_fkey"
+            columns: ["material_id"]
+            isOneToOne: false
+            referencedRelation: "materials"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      materials: {
+        Row: {
+          branch: string
+          created_at: string
+          description: string | null
+          downloads: number
+          file_size: number | null
+          file_type: string
+          file_url: string | null
+          id: string
+          rating: number | null
+          rating_count: number | null
+          semester: string
+          subject: string
+          subject_code: string | null
+          title: string
+          updated_at: string
+          uploader_id: string
+          year: string
+        }
+        Insert: {
+          branch: string
+          created_at?: string
+          description?: string | null
+          downloads?: number
+          file_size?: number | null
+          file_type: string
+          file_url?: string | null
+          id?: string
+          rating?: number | null
+          rating_count?: number | null
+          semester: string
+          subject: string
+          subject_code?: string | null
+          title: string
+          updated_at?: string
+          uploader_id: string
+          year: string
+        }
+        Update: {
+          branch?: string
+          created_at?: string
+          description?: string | null
+          downloads?: number
+          file_size?: number | null
+          file_type?: string
+          file_url?: string | null
+          id?: string
+          rating?: number | null
+          rating_count?: number | null
+          semester?: string
+          subject?: string
+          subject_code?: string | null
+          title?: string
+          updated_at?: string
+          uploader_id?: string
+          year?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ratings: {
+        Row: {
+          created_at: string
+          id: string
+          material_id: string
+          rating: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          material_id: string
+          rating: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          material_id?: string
+          rating?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ratings_material_id_fkey"
+            columns: ["material_id"]
+            isOneToOne: false
+            referencedRelation: "materials"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
